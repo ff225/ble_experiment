@@ -30,7 +30,9 @@ class BluetoothConnectNotifier extends StateNotifier<BluetoothModel> {
         serviceId: Uuid.parse("181A"),
         characteristicId: Uuid.parse("2A6E"),
         deviceId: device.id);
-    final response = _ble.readCharacteristic(characteristic);
+    final response = await _ble.readCharacteristic(characteristic);
+    state = BluetoothModel(state.id, state.name,
+        isConnected: state.isConnected, data: response[0]);
     print(response);
   }
 
