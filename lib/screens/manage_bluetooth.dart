@@ -41,7 +41,9 @@ class ManageBluetoothScreen extends ConsumerWidget {
                 child: const Text('Leggi'),
               )
             ],
-          )
+          ),
+          const SizedBox(height: 20,),
+          Text(bluetoothItem.data.toString())
         ],
       ),
     );
