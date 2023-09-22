@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:ble_experiment/model/bluetooth_item_model.dart';
+import 'package:ble_experiment/notifications/local_notification_service.dart';
 import 'package:flutter_reactive_ble/flutter_reactive_ble.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -20,6 +21,9 @@ class BluetoothConnectNotifier extends StateNotifier<BluetoothModel> {
     )
         .listen((event) {
       print(event.connectionState.name);
+      if (event.connectionState == DeviceConnectionState.connected) {
+        showLocalNotification(device.name, event.connectionState.name);
+      }
       state = BluetoothModel(device.id, device.name,
           isConnected: event.connectionState);
     });
