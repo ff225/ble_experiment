@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "226707112037",
+    "project_id": "ble-experiment-notification",
+    "storage_bucket": "ble-experiment-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226707112037:android:25ba1bbfa13d95d835468c",
+        "android_client_info": {
+          "package_name": "com.example.ble_experiment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJPynHgxMkh5Vo2Uv4YEKJfoaAuseKIQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
