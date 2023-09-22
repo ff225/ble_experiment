@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:ble_experiment/model/bluetooth_item_model.dart';
+import 'package:ble_experiment/notifications/local_notification_service.dart';
 import 'package:flutter_reactive_ble/flutter_reactive_ble.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -27,6 +28,7 @@ class BluetoothNotifier extends StateNotifier<List<BluetoothModel>> {
           print('Stato unknown');
           break;
         case BleStatus.ready:
+          showLocalNotification('Bluetooth', 'Scansione in corso...');
           state = [];
           final test = _ble.scanForDevices(withServices: []).listen((event) {
             if (event.name != '' &&
