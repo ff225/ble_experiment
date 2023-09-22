@@ -38,6 +38,9 @@ dependencies:
   flutter_riverpod: ^2.4.0
   flutter_reactive_ble: ^5.2.0
   permission_handler: ^11.0.0
+  firebase_messaging: ^14.6.8
+  firebase_core: ^2.16.0
+  flutter_local_notifications: ^15.1.1
 
 dev_dependencies:
   flutter_test:
