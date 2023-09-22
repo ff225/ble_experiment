@@ -4,9 +4,6 @@ import 'package:ble_experiment/widgets/bluetooth_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-/* TODO: questa pagina deve essere stateful perché il valore della lista è
- ottenuto dal tasto refresh
- */
 
 class HomePageScreen extends ConsumerWidget {
   const HomePageScreen({super.key});
